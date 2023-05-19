@@ -11,11 +11,35 @@
 html{
 	font: normal 16px sans-serif;
 	color: #555;
+	scroll-behavior: smooth;
+}
+
+.nomargin{
+	margin: 0 !important;
 }
 
 .btn_bed{
 	margin-top: 20px;
     background-color: chocolate !important;
+}
+
+#design1, #design2, #design3, #design4, #design5{
+	margin-top: 50px;
+	display: none;
+}
+
+#design1t, #design2t, #design3t, #design4t, #design5t{
+	margin-top: 50px;
+	display: none;
+}
+
+.designopen{
+	display: flex !important;
+}
+
+.kitchen{
+	margin: 0;
+	padding: 0 50px;
 }
 
 .designs{
@@ -28,6 +52,7 @@ html{
 
 .design{
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	min-width: 200px;
@@ -45,6 +70,23 @@ html{
 	margin-bottom: 0;
 	padding: 0;
 	font-weight: 500;
+}
+
+.design>a{
+	color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: #2196F3;
+    font-weight: 800;
+    text-align: center;
+	border: none;
+    padding: 5px;
+	cursor: pointer;
+}
+
+.design>a:active{
+	background-color: #fff;
+	color: #2196F3;
 }
 
 ul, nav{
