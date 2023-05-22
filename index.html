@@ -18,10 +18,10 @@
 	<header id="header">
 		<h2><a href="#">Mebel Almaty</a></h2>
 		<nav>
-			<li><a href="#hero">Главная</a></li>
-			<li><a href="#our-work">Примеры</a></li>
-			<li><a href="#reviews">Отзывы</a></li>
-			<li><a href="#footer">Контакты</a></li>
+			<li><a id="herobtn">Главная</a></li>
+			<li><a id="our-workbtn">Примеры</a></li>
+			<li><a id="reviewsbtn">Отзывы</a></li>
+			<li><a id="footerbtn">Контакты</a></li>
 		</nav>
 	</header>
 
@@ -30,7 +30,7 @@
 		<div class="background-image" style="background-image: url(assets/img/theme.jpg);"></div>
 		<h1>Кухонные и спальные гарнитуры в Алматы</h1>
 		<h3>Быстро, Качественно, ответственно</h3>
-		<a href="#kitchen" class="btn">Кухонная гарнитура</a>
+		<a id="kitchenbtn" class="btn">Кухонная гарнитура</a>
 		<a href="#features" class="btn btn_bed">Спальная гарнитура</a>
 	</section>
 
@@ -278,6 +278,67 @@
 		<p>No attribution required. you can remove this footer.</p>
 	</footer>
 <script>
+	document.getElementById('herobtn').onclick = function() {
+		const scrollTarget = document.getElementById('hero');
+		const topOffset = document.getElementById('header').offsetHeight;
+		const elementPosition = scrollTarget.getBoundingClientRect().top;
+		const offsetPosition = elementPosition - topOffset;
+
+		window.scrollBy({
+			top: offsetPosition,
+			behavior: "smooth"
+		});
+	}
+
+	document.getElementById('our-workbtn').onclick = function() {
+		const scrollTarget = document.getElementById('our-work');
+		const topOffset = document.getElementById('header').offsetHeight;
+		const elementPosition = scrollTarget.getBoundingClientRect().top;
+		const offsetPosition = elementPosition - topOffset;
+
+		window.scrollBy({
+			top: offsetPosition,
+			behavior: "smooth"
+		});
+	}
+
+	document.getElementById('reviewsbtn').onclick = function() {
+		const scrollTarget = document.getElementById('reviews');
+		const topOffset = document.getElementById('header').offsetHeight;
+		const elementPosition = scrollTarget.getBoundingClientRect().top;
+		const offsetPosition = elementPosition - topOffset;
+
+		window.scrollBy({
+			top: offsetPosition,
+			behavior: "smooth"
+		});
+	}
+
+	document.getElementById('footerbtn').onclick = function() {
+		const scrollTarget = document.getElementById('footer');
+		const topOffset = document.getElementById('header').offsetHeight;
+		const elementPosition = scrollTarget.getBoundingClientRect().top;
+		const offsetPosition = elementPosition - topOffset;
+
+		window.scrollBy({
+			top: offsetPosition,
+			behavior: "smooth"
+		});
+	}
+
+
+	document.getElementById('kitchenbtn').onclick = function() {
+		const scrollTarget = document.getElementById('kitchen');
+		const topOffset = document.getElementById('header').offsetHeight;
+		const elementPosition = scrollTarget.getBoundingClientRect().top;
+		const offsetPosition = elementPosition - topOffset;
+
+		window.scrollBy({
+			top: offsetPosition,
+			behavior: "smooth"
+		});
+	}
+
 	document.getElementById('design1b').onclick = function() {
 	document.getElementById('design2').classList.remove('designopen');
 	document.getElementById('design3').classList.remove('designopen');
