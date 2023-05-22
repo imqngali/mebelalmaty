@@ -15,7 +15,7 @@
 
 <body>
 
-	<header>
+	<header id="header">
 		<h2><a href="#">Mebel Almaty</a></h2>
 		<nav>
 			<li><a href="#hero">Главная</a></li>
@@ -129,7 +129,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="kitchen" id="design3">
+	<section class="kitchen designP" id="design3">
 		<h3 class="title">Hi-tech</h3>
 		<p>Выберите дизайн</p>
 		<div class="designs">
@@ -286,6 +286,15 @@
 	document.getElementById('colours').classList.remove('designopen');
 	document.getElementById('form').classList.remove('opened');
 	document.getElementById('design1').classList.toggle('designopen');
+	const scrollTarget = document.getElementById('design1');
+	const topOffset = document.getElementById('header').offsetHeight;
+	const elementPosition = scrollTarget.getBoundingClientRect().top;
+	const offsetPosition = elementPosition - topOffset;
+
+	window.scrollBy({
+		top: offsetPosition,
+		behavior: "smooth"
+	});
   }
   document.getElementById('design2b').onclick = function() {
 	document.getElementById('design1').classList.remove('designopen');
@@ -295,6 +304,15 @@
 	document.getElementById('colours').classList.remove('designopen');
 	document.getElementById('form').classList.remove('opened');
 	document.getElementById('design2').classList.toggle('designopen');
+	const scrollTarget = document.getElementById('design2');
+	const topOffset = document.getElementById('header').offsetHeight;
+	const elementPosition = scrollTarget.getBoundingClientRect().top;
+	const offsetPosition = elementPosition - topOffset;
+
+	window.scrollBy({
+		top: offsetPosition,
+		behavior: "smooth"
+	});
   }
   document.getElementById('design3b').onclick = function() {
 	document.getElementById('design1').classList.remove('designopen');
@@ -304,6 +322,15 @@
 	document.getElementById('colours').classList.remove('designopen');
 	document.getElementById('form').classList.remove('opened');
 	document.getElementById('design3').classList.toggle('designopen');
+	const scrollTarget = document.getElementById('design3');
+	const topOffset = document.getElementById('header').offsetHeight;
+	const elementPosition = scrollTarget.getBoundingClientRect().top;
+	const offsetPosition = elementPosition - topOffset;
+
+	window.scrollBy({
+		top: offsetPosition,
+		behavior: "smooth"
+	});
   }
   document.getElementById('design4b').onclick = function() {
 	document.getElementById('design1').classList.remove('designopen');
@@ -313,6 +340,15 @@
 	document.getElementById('colours').classList.remove('designopen');
 	document.getElementById('form').classList.remove('opened');
 	document.getElementById('design4').classList.toggle('designopen');
+	const scrollTarget = document.getElementById('design4');
+	const topOffset = document.getElementById('header').offsetHeight;
+	const elementPosition = scrollTarget.getBoundingClientRect().top;
+	const offsetPosition = elementPosition - topOffset;
+
+	window.scrollBy({
+		top: offsetPosition,
+		behavior: "smooth"
+	});
   }
   document.getElementById('design5b').onclick = function() {
 	document.getElementById('design1').classList.remove('designopen');
@@ -322,22 +358,49 @@
 	document.getElementById('colours').classList.remove('designopen');
 	document.getElementById('form').classList.remove('opened');
 	document.getElementById('design5').classList.toggle('designopen');
+	const scrollTarget = document.getElementById('design5');
+	const topOffset = document.getElementById('header').offsetHeight;
+	const elementPosition = scrollTarget.getBoundingClientRect().top;
+	const offsetPosition = elementPosition - topOffset;
+
+	window.scrollBy({
+		top: offsetPosition,
+		behavior: "smooth"
+	});
   }
   let ab = document.querySelectorAll('#openColours');
-  for (let aa of ab) {
-	aa.onclick = function() {
-	document.getElementById('colour').innerHTML = aa.parentElement.parentElement.parentElement.children[0].innerHTML + ' : ' + aa.parentElement.children[0].innerHTML;
-	document.getElementById('form').classList.remove('opened');
-	document.getElementById('colours').classList.add('designopen');
-  }
+  	for (let aa of ab) {
+		aa.onclick = function() {
+		document.getElementById('colour').innerHTML = aa.parentElement.parentElement.parentElement.children[0].innerHTML + ' : ' + aa.parentElement.children[0].innerHTML;
+		document.getElementById('form').classList.remove('opened');
+		document.getElementById('colours').classList.add('designopen');
+		const scrollTarget = document.getElementById('colours');
+        const topOffset = document.getElementById('header').offsetHeight;
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+  	}
   }
 
   let bs = document.querySelectorAll('#order');
-  for (let bb of bs) {
-	bb.onclick = function() {
-	document.getElementById('stuff').value = bb.parentElement.parentElement.parentElement.children[0].innerHTML + ' : ' + bb.parentElement.children[0].innerHTML;
-	document.getElementById('form').classList.add('opened');
-  }
+	for (let bb of bs) {
+		bb.onclick = function() {
+		document.getElementById('stuff').value = bb.parentElement.parentElement.parentElement.children[0].innerHTML + ' : ' + bb.parentElement.children[0].innerHTML;
+		document.getElementById('form').classList.add('opened');
+		const scrollTarget = document.getElementById('form');
+        const topOffset = document.getElementById('header').offsetHeight;
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+	}
   }
 </script>
 </body>
