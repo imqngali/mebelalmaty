@@ -14,6 +14,10 @@ html{
 	scroll-behavior: smooth;
 }
 
+.bedgar{
+	margin-top: 100px;
+}
+
 .nomargin{
 	margin: 0 !important;
 }
@@ -23,7 +27,7 @@ html{
     background-color: chocolate !important;
 }
 
-#design1, #design2, #design3, #design4, #design5, #colours, #form{
+#design1, #design2, #design3, #design4, #design5, #colours, #form, #design11, #design21, #design31, #design41, #design51, #colours1, #form1{
 	margin-top: 50px;
 	display: none;
 }
@@ -42,7 +46,6 @@ html{
 }
 
 .designs{
-	width: 100%;
 	display: flex;
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -87,6 +90,13 @@ html{
 .design>a:active{
 	background-color: #fff;
 	color: #2196F3;
+}
+
+@media (max-width: 1000px){
+
+	.designs{
+		width: 100%;
+	}
 }
 
 ul, nav{
